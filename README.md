@@ -3,27 +3,21 @@
 DSC160 Data Science and the Arts - Final Project - Generative Arts - Spring 2020
 
 Project Team Members: 
-- Firstname Lastname1, name1@ucsd.edu
-- Firstname Lastname2, name2@ucsd.edu
-- Firstname Lastname3, name3@ucsd.edu
-- Firstname Lastname4, name4@ucsd.edu
-- Firstname Lastname5, name5@ucsd.edu
+- Austin Le, aule@ucsd.edu
+- Justin Kang, jjk139@ucsd.edu 
+- Sravya Voleti, srvoleti@ucsd.edu
+- Sruthi Vedantham, srvedant@ucsd.edu
+- Zahra Masood, zbmasood@ucsd.edu
 
 ## Abstract
 
 (10 points) 
 
-For the project proposal, please write a short abstact addressing the questions below. You need to replace the entire contents of this section with one to two paragraphs addressing the following:
+Our concept for this generative art project is to generate lyrics for a new Beyonce song by training a RNN model using a variety of Beyonce lyrics. We hope to extract features from these newly generated lyrics and compare them to features in already existing Beyonce lyrics to measure how accurately our model was able to create this generative art. We will be generating our song lyrics using a character-based RNN. This topic is interesting because Beyonce is one of the most popular artists from our generation. She has sold over 100 million records worldwide, and is known as one of the world’s best selling music artists. As such an influential and popular person in the music industry, we felt it would be interesting to examine the elements of her song lyrics and see if we could generate an accurate representation of her writing style. In lecture, we learned a lot about generative art and learning with neural networks. We investigated various forms of generative text, generative images, and generative sounds. 
 
-- What is your concept for a generative art project? 
-- What methods/networks/techniques will you employ (include links to technical precedents/code bases)
-- What training data (if any) will you use for your project? 
-- What kind of results do you hope that your system will produce?
-- How will you present your result/what form will your output take?
-- What if any challenges to you think may arise as you are working with this?
-- How are you expanding on topics we have covered in class? 
-- Why is it interesting? (personally, culturally, politically, other)
-- List three papers / art projects that are references for this work.
+This project is an extension of these topics as we’re using a character-based RNN to create generative text (lyrics) of a particular artist, Beyonce and quantitatively comparing the similarity of it to song lyrics that already exist (https://github.com/roberttwomey/dsc160-code/blob/master/examples/text-generation-rnn.ipynb). Some of the libraries we will be using are TensorFlow and other basic libraries such as Pandas and Numpy. We will start off by scraping the website that contains all of Beyonce’s albums and creating a dataframe that contains the name of each song, the album it’s from, the total number of words, and the lyrics for that song. Then we will go on to vectorize the text by mapping the string representations to a numerical one. After this, we will begin to create training examples so our model can use our input in order to predict what words will come next based on a given sequence of words. Then, we will go on to actually build our RNN model with three layers: the input layer, the LSTM layer, and the output layer. After this, we will use our training examples to train our model and see how well it performs when given sequences of words. After optimizing our model based on how well it performs, we will finally go on to actually generating our text using a prediction loop. After generating our new lyrics, we will compare features calculated on the original training data with features calculated on the newly generated lyrics. These features include the number of words in the lyrics, common phrases, and common words.The training data we will be using are all of Beyonce’s existing song lyrics. We will obtain this data by scraping an online database that contains the lyrics to all of Beyonce’s songs (https://www.azlyrics.com/k/knowles.html).
+
+We hope that our system will produce the lyrics to the ultimate Beyonce song song that is based on her existing body of work. We will calculate similarity by comparing features we calculate on her existing body of work with features we calculate on the newly generated song lyrics. Using a form of generative art, we are planning to take the songs of Beyonce and use all the lyrics from her songs in order to generate lyrics to a new song. We will present the newly created song lyrics that we generated and compare it to her previous works to see if the new lyrics make sense and can add a different element. Our output would be in a text format. One specific challenge for our project would be finding the right database that contains the necessary song lyrics for the Beyonce songs we want to use to generate our own lyrics. Copyright issues as well as being able to scrape the necessary song metadata (ex. Album year, song year) could force our group to manually acquire the necessary lyrics from various sources instead of one single source. Generating a coherent lyric once we create a functional model would become another potential setback to our project. Since our group has no real experience using neural networks, how we are able to correctly implement models could significantly affect the performance of our predicted lyrics. Some work we will be referencing to complete our project includes: Professor Twomey’s RNN and generative text example: https://github.com/roberttwomey/dsc160-code/blob/master/examples/text-generation-rnn.ipynb, Exploring the unreasonable effectiveness of RNNs: http://karpathy.github.io/2015/05/21/rnn-effectiveness/, Utilizing LSTMs and CNNs for creation of song lyrics: https://techxplore.com/news/2019-01-song-lyrics-style-specific-artists.html, and Creating word-based RNNs using tensorflow: https://github.com/hunkim/word-rnn-tensorflow
 
 ## Data and Model
 

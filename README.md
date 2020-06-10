@@ -97,9 +97,27 @@ The subsequent paragraphs could address questions including:
 - What are the ethical concerns for this form of generative art? 
 - In what future directions could you expand this work?
 
+After running all of Beyonce’s lyrics through an RNN model, we generated a song that made legible words, but were not grammatically correct. Since the API only allowed us to input the amount of characters we wanted, we inputted the value of mean characters in a Beyonce song. We ran the model through multiple epoch values to increase the training time and we found that the higher epoch value did give us a better result, but it took an exponentially longer amount of time. Lower epoch values could not even create legible words so it made sense to increase the value and we settled it upon 30 Epochs because it generated real words without overfitting our data. We then quantitatively compared both the existing lyrics and the newly generated lyrics and found a decent amount of similarity between them. 
+
+This is culturally innovative because Beyonce is one of the biggest musical artists of our generation, with over 100 million records sold worldwide. Moreover, music is a really important part of many people’s lives, which is why being able to generate music that resembles a particular artist is very interesting. As technology is improving, this type of generative art will only improve, making the generated song sound more and more realistic. Moreover, text generation technology gives musicians another way to approach their art, by giving them new ideas and inspiration for their work.
+
+One thing that differentiates our “generated song” is that the computational approach bases these words on the given training set of past songs. We are basing our lyrics purely on past lyrics from Beyonce, so we won’t necessarily “create” new words to use. Generally, when artists are creating new songs, they don’t necessarily look at previous songs and copy the words/phrases from a previous song.  Most artists don’t reuse lyrics because each song represents a different period in life or message that they’re trying to present. Musical artists strive to be different from one another and in order to do so lyrically, they might try to follow their inspirations and feelings that surround them rather than looking at their own previous works. 
+
+Our results relate to broader social, cultural, economic, and political issues as politically, because our lyrics are only trained on lyrics from preexisting songs, there is a limitation on how political the song can be and what social or political issues it can touch upon. If there is a new movement taking form for example (similar to what is going on right now), then the song won’t have the capacity or ability to address it. A lot of songs emerge from a specific social or political context and a lot of artists use music as a powerful outlet, so generative lyrics are limited and do not have this same creative potential. Also, with the emergence of generative lyrics, there will be larger implications in terms of the power and capacity of music, for example there are lots of protest songs right now but the extent to which these can emerge and have powerful effects will be lessened. Knowing that our results relate broadly to political issues also highlights the ethical concerns around generative art and music. Ethical concerns regarding our generative project would primarily revolve around ownership of the newly generated lyrics. With the current copyrights in the United States, there is no clear answer as to whether or not the artist used to train the algorithm or the algorithm itself would actually own the generated song. In our case, there currently is no specific law that would grant intellectual property rights of our generated results to Beyonce. However, another ethical issue surrounding generating lyrics and songs, would be the licensing on the songs used to train the algorithm. There is currently a debate about using copyrighted songs for training purposes with arguments suggesting that this could be a more clearly defined issue. But according to theverge.com, their article on AI in the music industry found experts to still be unsure about how exactly this could be a problem. At any rate, the lack of specificity in copyright laws when it comes to AI and other generative technology will surely raise more questions than answers for the time being.  
+
+We could expand this work by using a word based RNN model instead of a character based one. This might allow us to gain more coherent lyrics or lyrics that better match Beyonce’s lyrical style. Additionally, we could add more metrics for comparison between the generated lyrics and the existing lyrics to better quantify the differences. This could include a more robust sentiment analysis, along with a deeper extraction of the themes and ideas that she sings about. Based on our peer feedback, we could also incorporate a GPT-2 model instead of, or in addition to, the results from our RNN model. Many of our peers thought that this would produce more coherent results, which would also help in comparing the newly generated lyrics to the existing lyrics.
+
+
 ## Team Roles
 
 Provide an account of individual members and their efforts/contributions to the specific tasks you accomplished.
+
+- Austin Le: Worked on feature extraction, Final Report
+- Justin Kang: Worked on data source collection, Final Report
+- Sravya Voleti: Worked on the RNN model, Final Report
+- Sruthi Vedantham: Worked on feature extraction, Final Report
+- Zahra Masood: Worked on the RNN model, Final Report
+
 
 ## Technical Notes and Dependencies
 
@@ -108,9 +126,26 @@ Any implementation details or notes we need to repeat your work.
 - Does this code require other pip packages, software, etc?
 - Does this code need to run on some other (non-datahub) platform? (CoLab, etc.)
 
+We primarily used datahub and the jupyter notebook attachment of the Anaconda, a popular data science software environment to complete our project. Additional resources utilized in this project included the Tensorflow package for our model creation and the Wordcloud package for visualization purposes. No further software or package installations were necessary beyond two mentioned packages, to complete the project and all other packages found in Anaconda should be adequate to repeat the steps in our project. In terms of the data collection, if the same scraping techniques are to be implemented we would advise scraping the lyrics in groups rather than in one instance. The process will take more time, but avoids the possibilities of an IP ban from the source site.  
+
 ## Reference
 
 All references to papers, techniques, previous work, repositories you used should be collected at the bottom:
 - Papers
 - Repositories
 - Blog posts
+
+- Papers:
+  - Exploring the unreasonable effectiveness of RNNs: http://karpathy.github.io/2015/05/21/rnn-effectiveness/
+  - Utilizing LSTMs and CNNs for creation of song lyrics: https://techxplore.com/news/2019-01-song-lyrics-style-specific-artists.html
+  - Creating word-based RNNs using tensorflow: https://github.com/hunkim/word-rnn-tensorflow 
+  
+- Repositories: 
+  - Professor Twomey’s RNN and generative text example: https://github.com/roberttwomey/dsc160-code/blob/master/examples/text-generation-rnn.ipynb
+
+- Tutorials: 
+  - TensorFlow: Recurrent Neural Networks (RNN) with Keras: https://www.tensorflow.org/guide/keras/rnn
+  - TensorFlow: Text Generation with an RNN: https://www.tensorflow.org/tutorials/text/text_generation
+  
+- Blog posts:
+  - TheVerge: Warnings about AI in the Music Industry: https://www.theverge.com/2019/4/17/18299563/ai-algorithm-music-law-copyright-human

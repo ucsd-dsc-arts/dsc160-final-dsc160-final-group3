@@ -74,17 +74,6 @@ This section should summarize your results and will embed links to documentation
 
 ## Discussion
 
-(30 points, three to five paragraphs)
-
-The first paragraph should be a short summary describing your results.
-
-The subsequent paragraphs could address questions including:
-- Why is this culturally innovative?
-- How does your generative computational approach differ from traditional art/music/cultural production? 
-- How do your results relate to broader social, cultural, economic political, etc., issues? 
-- What are the ethical concerns for this form of generative art? 
-- In what future directions could you expand this work?
-
 After running all of Beyonce’s lyrics through an RNN model, we generated a song that made legible words, but were not grammatically correct. Since the API only allowed us to input the amount of characters we wanted, we inputted the value of mean characters in a Beyonce song. We ran the model through multiple epoch values to increase the training time and we found that the higher epoch value did give us a better result, but it took an exponentially longer amount of time. Lower epoch values could not even create legible words so it made sense to increase the value and we settled it upon 30 Epochs because it generated real words without overfitting our data. We then quantitatively compared both the existing lyrics and the newly generated lyrics and found a decent amount of similarity between them. 
 
 This is culturally innovative because Beyonce is one of the biggest musical artists of our generation, with over 100 million records sold worldwide. Moreover, music is a really important part of many people’s lives, which is why being able to generate music that resembles a particular artist is very interesting. As technology is improving, this type of generative art will only improve, making the generated song sound more and more realistic. Moreover, text generation technology gives musicians another way to approach their art, by giving them new ideas and inspiration for their work.
@@ -109,19 +98,9 @@ Provide an account of individual members and their efforts/contributions to the 
 
 ## Technical Notes and Dependencies
 
-Any implementation details or notes we need to repeat your work. 
-- Additional libraries you are using for this project
-- Does this code require other pip packages, software, etc?
-- Does this code need to run on some other (non-datahub) platform? (CoLab, etc.)
-
 We primarily used datahub and the jupyter notebook attachment of the Anaconda, a popular data science software environment to complete our project. Additional resources utilized in this project included the Tensorflow package for our model creation and the Wordcloud package for visualization purposes. No further software or package installations were necessary beyond two mentioned packages, to complete the project and all other packages found in Anaconda should be adequate to repeat the steps in our project. In terms of the data collection, if the same scraping techniques are to be implemented we would advise scraping the lyrics in groups rather than in one instance. The process will take more time, but avoids the possibilities of an IP ban from the source site.  
 
 ## Reference
-
-All references to papers, techniques, previous work, repositories you used should be collected at the bottom:
-- Papers
-- Repositories
-- Blog posts
 
 - Papers:
   - Exploring the unreasonable effectiveness of RNNs: http://karpathy.github.io/2015/05/21/rnn-effectiveness/

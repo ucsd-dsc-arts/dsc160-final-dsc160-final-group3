@@ -1,4 +1,4 @@
-# Project Title
+# BeyoncAI: The Ultimate Beyonce Song
 
 DSC160 Data Science and the Arts - Final Project - Generative Arts - Spring 2020
 

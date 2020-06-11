@@ -29,22 +29,12 @@ The model we used was a character-based Recurrent Neural Network (RNN) to genera
 
 ## Code
 
-(20 points)
-
-This section will link to the various code for your project (stored within this repository). Your code should be executable on datahub, should we choose to replicate your result. This includes code for: 
-
-- code for data acquisition/scraping
-- code for preprocessing
-- training code (if appropriate)
-- generative methods
-
-Link each of these items to your .ipynb or .py files within this seection, and provide a brief explanation of what the code does. Reading this section we should have a sense of how to run your code.
-
 ### Code for Data Acquistion/Scraping
-- code: https://github.com/ucsd-dsc-arts/dsc160-final-dsc160-final-group3/blob/master/code/DSC%20160%20Final%20Project%20-%20Lyric%20Scrape.ipynb
 Our initial steps for acquiring our dataset first involved collecting the title of the songs within the URL format (i.e “Crazy in Love” would appear as “crazyinlove.html”) for the azlyrics.com website through its subsequent HTML page using the BeautifulSoup package. For our project, we encountered over 200 initial songs before we were able to narrow down to 127 songs. We manually cutoff the number of songs by the order they appear on azlyrics.com. It was then we added a line of code that extracted only unique values, meaning songs that appear twice were only counted as one song. 
 
 With our list of songs ready, we then constructed a series of for-loops that would iterate through our list of songs. In order, our code would access the html page for the specific song, access the location of the actual song lyrics through div tags, and then subsequently scrape the lyrics located within another div tag. The BeautifulSoup package was again utilized throughout these steps. As the for-loops are running, the lyric information is being stored in both a dictionary and list. The completed list was then used to generate a text file storing all the lyrics as one string, while the dictionary was used to store the song title and its lyrics in a dataframe. It is from our experience using azlyrics.com that it is best not to scrape all 127 songs within one cell. Early scrapping attempts resulted in a temporary IP ban, thus we ran our final scraping algorithm in 6 groups or chunks of songs, to avoid any issues with the site.
+
+code: https://github.com/ucsd-dsc-arts/dsc160-final-dsc160-final-group3/blob/master/code/DSC%20160%20Final%20Project%20-%20Lyric%20Scrape.ipynb
 
 ### Code for Preprocessing and Feature Extraction
 - code for lyric analysis and sentiment analysis: https://github.com/ucsd-dsc-arts/dsc160-final-dsc160-final-group3/blob/master/code/Lyric_Sentiment_Analysis.ipynb

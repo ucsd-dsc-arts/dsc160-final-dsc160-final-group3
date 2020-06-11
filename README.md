@@ -64,13 +64,7 @@ When given an input starting string (in our case, we used the popular lyric “D
 
 ## Results
 
-(30 points) 
-
-This section should summarize your results and will embed links to documentation to significant outputs. This should document both process and show artistic results. This can include figures, sound files, videos, bitmaps, as appropriate to your generative art idea. Each result should include a brief textual description, and all should be listed below: 
-
-- image files (`.jpg`, `.png` or whatever else is appropriate)
-- audio files (`.wav`, `.mp3`)
-- written text as `.pdf`
+Our results can be viewed here: https://github.com/ucsd-dsc-arts/dsc160-final-dsc160-final-group3/blob/master/results/DSC%20160%20Final%20Project%20Results.pdf
 
 ## Discussion
 

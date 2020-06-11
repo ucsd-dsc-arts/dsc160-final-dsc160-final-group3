@@ -37,20 +37,26 @@ With our list of songs ready, we then constructed a series of for-loops that wou
 code: https://github.com/ucsd-dsc-arts/dsc160-final-dsc160-final-group3/blob/master/code/DSC%20160%20Final%20Project%20-%20Lyric%20Scrape.ipynb
 
 ### Code for Preprocessing and Feature Extraction
-- code for lyric analysis and sentiment analysis: https://github.com/ucsd-dsc-arts/dsc160-final-dsc160-final-group3/blob/master/code/Lyric_Sentiment_Analysis.ipynb
 Our first feature notebook looks at common words and sentiments in lyrics. This notebook looks at the length of lyrics (in characters and words), as well as what percentage of the lyrics are romantic, positive, and negative. Running all cells should conduct feature extraction and produce plots that explain the differences between the two sets of lyrics.
 
-- code for ngram modeling: https://github.com/ucsd-dsc-arts/dsc160-final-dsc160-final-group3/blob/master/code/N_Gram%20Modeling.ipynb
+
+code for lyric analysis and sentiment analysis: https://github.com/ucsd-dsc-arts/dsc160-final-dsc160-final-group3/blob/master/code/Lyric_Sentiment_Analysis.ipynb
+
+
 This notebook focuses on extracting different features from the set of lyrics and songs we have. The notebook looks at most common phrases, data visualizations, TF-IDF vectors, as well as a probability model. Running all these cells should give a sense of the lyrics’ features as well as some statistics.
 
 
+code for ngram modeling: https://github.com/ucsd-dsc-arts/dsc160-final-dsc160-final-group3/blob/master/code/N_Gram%20Modeling.ipynb
+
+
 ### Code for Model
-- https://github.com/ucsd-dsc-arts/dsc160-final-dsc160-final-group3/blob/master/code/Beyonce%20-%20RNN%20Text%20Generation.ipynb
+
 We used a Recurrent neural network in order to generate our Beyonce song lyrics.  We implemented one similar to the example on the Tensorflow website and the one given by the Professor. An RNN is a class of neural networks that is very powerful for modeling sequence data like natural language, which is what we used it for. An RNN works by maintaining an internal state that encodes information about the characters it has seen so far while using a prediction for loop which iterates over the sequence. One important parameter used for training our data was the number of epochs. An epoch is a measure of the number of times all of the training vectors are used once to update the weights. In our model, we used a different amount of epochs when training in order to see how our generated text improved and worsened. We started by using 10 epochs, which gave us text that did not have many complete words and were mostly random letters that did not make sense. Then we used 30 epochs, which gave us clear words, but was not necessarily coherent. We wanted to see if our generated text could get better than this so we decided to try using 50 epochs, but this gave us text that was directly pulled from her songs, with many phrases being actual lyrics. We realized that using 50 epochs made us overfit our model, and therefore we believed that 30 epochs would be the ideal number for our RNN. 
 
 When given an input starting string (in our case, we used the popular lyric “Drunk in Love”), the model returns a bunch of generated text. The text generated is dependent upon the conditions we set for our model (number of epochs, number of characters, songs trained on, etc.), and as mentioned above, we were able to adjust these conditions to create the best model.
 
 
+code for model: https://github.com/ucsd-dsc-arts/dsc160-final-dsc160-final-group3/blob/master/code/Beyonce%20-%20RNN%20Text%20Generation.ipynb
 
 ## Results
 
